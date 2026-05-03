@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #cc3705;
+  --negrotexto: #111111;
+  --blancohueso: #faf9f8;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: auto;
+  background-color: var(--blancohueso);
+  color: var(--negrotexto);
+}
+
+/* navegación */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 3%;
+}
+
+h1 {
+  margin: 0;
+}
+
+h1:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+
+  li {
+    position: relative;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: var(--red);
+  }
+}
+
+.nav-link {
+  display: block;
+  visibility: hidden;
+  transition: 0.5 ease-in-out;
+}
+
+li:hover .nav-link {
+  visibility: visible;
+}
+
+/* zoom fotos */
+
+/* Animación */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sello {
+  animation: spin 4s infinite linear;
+  width: 80vmin;
+  height: 80vmin;
+  object-fit: contain;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+}
+
+.otramundamain {
+  margin: 5%;
+}
+
+/* proyecto */
+
+.verproyecto {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.listaproyecto {
+  /* font-weight: bold; */
+  font-size: large;
+}
+
+details {
+  margin: 1rem 0 1rem 0;
+  width: 80%;
+  line-height: 1.5rem;
+}
+
+summary {
+  list-style-type: "★";
+}
+
+main {
+  margin: 5%;
+}
+
+i:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+/* card details  */
+
+img.imgdetail {
+  width: 25vw; /* cambia el tamaño de la imagen en el card */
+  height: fit-content;
+}
+
+.cardetail {
+  display: flex;
+  gap: 1rem;
+}
+
+.textdetail {
+  align-content: center;
+}
+
+/* Proyectos  */
+
+.container_proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.img_proyectos {
+  width: 35vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.back_proyectos {
+  width: 3rem;
+  margin: 3rem 0 0 0;
+}
+
+/* Info */
+
+.titulo--bold {
+  font-weight: bold;
+}
+
+.info--links {
+  text-decoration: underline;
+}
+
+.info--links:hover {
+  color: var(--red);
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+footer p {
+  margin-top: 2.5rem;
+  font-size: small;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--red);
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  details {
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+  }
+
+  .cardetail {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img.imgdetail {
+    width: 50vw;
+    height: auto;
+  }
+
+  .container_proyectos {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .img_proyectos {
+    width: 90vw;
+    height: auto;
+  }
+}

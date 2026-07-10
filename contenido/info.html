@@ -42,7 +42,7 @@
       <h1><a href="/index.html">Amanda Torres</a></h1>
       <ul>
         <li>
-          <a href="">Arte </a>
+          <a class="" href="">Arte </a>
           <ul class="nav-link">
             <li><a href="/contenido/pintura.html">Pintura</a></li>
             <li><a href="/contenido/grafica.html">Gráfica</a></li>
@@ -51,7 +51,7 @@
         </li>
 
         <li>
-          <a href="">Diseño </a>
+          <a class="">Diseño </a>
 
           <ul class="nav-link">
             <li><a href="/contenido/grafico.html"> Gráfico</a></li>
@@ -109,7 +109,26 @@
             >CV</a
           >
         </h2>
+    
       </div>
+       <div>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="80e25eee-db78-42ac-8814-274a43f37491"
+            />
+            <label for="name">Name:</label> <br />
+            <input type="text" name="name" placeholder="Tu nombre" required /> <br />
+            <label for="email" >Email:</label> <br />
+            <input type="email" placeholder="Tu email sino ¿cómo te contesto?" name="email" required /> <br />
+            <label for="message">Message:</label> <br />
+            <textarea name="message" placeholder="Lo que me quieras escribir" required></textarea>
+            <br />
+            <div class="h-captcha" data-captcha="true"></div>
+            <button class="btn-form" type="submit">Submit</button>
+          </form>
+        </div>
     </main>
 
     <!--footer-->
@@ -119,10 +138,13 @@
           id="cc_link"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en"
         >
-          CC BY-NC-SA 4.0
+          CC BY-NC-SA 4.0,
         </a>
-        Amanda Torres Rodríguez, 2025
+        Hecho a mano por Amanda Torres Rodríguez,
+        2025-2026
       </p>
     </footer>
+    <script src="/contactForm.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>

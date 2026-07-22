@@ -61,7 +61,7 @@ ul {
 .nav-link {
   display: block;
   visibility: hidden;
-  transition: 0.5 ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 li:hover .nav-link {
@@ -78,10 +78,15 @@ li:hover .nav-link {
   }
 }
 .sello {
-  animation: spin 4s infinite linear;
   width: 80vmin;
   height: 80vmin;
   object-fit: contain;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sello {
+    animation: spin 4s infinite linear;
+  }
 }
 
 figure {
@@ -204,7 +209,7 @@ form {
   font-style: normal;
   border-radius: 5px;
   width: 100%;
-  border:none;
+  border: none;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -222,7 +227,7 @@ textarea {
   background-color: #e8eeef;
   color: #112635;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
-   font-family: inherit;
+  font-family: inherit;
 }
 
 /* Footer */

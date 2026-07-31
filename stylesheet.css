@@ -17,6 +17,9 @@ body {
   margin: auto;
   background-color: var(--blancohueso);
   color: var(--negrotexto);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header - contenido - footer */
 }
 
 /* navegación */
@@ -81,11 +84,12 @@ li:hover .nav-link {
   width: 80vmin;
   height: 80vmin;
   object-fit: contain;
+  animation: spin 6s infinite linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: reduce) {
   .sello {
-    animation: spin 4s infinite linear;
+    animation: none;
   }
 }
 
